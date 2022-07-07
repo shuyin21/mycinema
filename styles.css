@@ -1,0 +1,61 @@
+body{
+    background-color:#B9E1E7;
+    margin:0;
+    width:100%;
+    background-size: cover;
+    position:absolute;
+    box-sizing: border-box;
+}
+
+#navlinks {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #46909B ;
+    align-items: center;
+}
+
+#navlinks a{
+    text-decoration: none;
+    color:white;
+    font-family: 'Dancing Script', cursive;
+    cursor: pointer;
+}
+
+#navlinks h1{
+   margin:0;
+   padding:0;
+   color:white;
+   font-family: 'Rubik Moonrocks', cursive;
+}
+
+#navlinks input{
+    border-radius: 15px;
+    border:none;
+    height:20px;
+    text-align: center;
+}
+
+#bucketlist ul {
+  display:none;
+  flex-direction: column;
+  justify-content: flex-start;
+  position:absolute;
+  background-color: #46909B ;
+  list-style-type: none;
+  text-align: center;
+  color:white;
+  padding:5px 5px;
+  border-radius: 10px;
+  font-size:16px;
+}
+
+.show {
+    display:flex;
+}
+
+#bucketlist ul li{
+    font-family: 'Nunito', sans-serif;
+}
+
+
