@@ -1,3 +1,14 @@
+
+let bList = document.getElementById("blist");
+let bListMenu = document.getElementById("bListMenu");
+
+
+bList.addEventListener('click', (e)=>{
+    e.preventDefault();
+    bListMenu.classlist.toggle("show");
+}
+)
+
 const btn = document.getElementById('button');
 const cardWrapper = document.getElementById('card-wrapper');
 
@@ -43,3 +54,4 @@ btn.addEventListener("click", () => {
 
 
 })
+
