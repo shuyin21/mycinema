@@ -1,0 +1,26 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.img-wrapper {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000;
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+#card-wrapper {
+    width: 100vw;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(188, 202, 188);
+}
