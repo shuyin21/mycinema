@@ -1,5 +1,7 @@
 let bList = document.getElementById("blist");
 let bListMenu = document.getElementById("bListMenu");
+let movieInput = document.getElementById("m-search")
+let seriesInput = document.getElementById("s-search")
 
 
 bList.addEventListener('click', (e) => {
@@ -7,6 +9,7 @@ bList.addEventListener('click', (e) => {
     bListMenu.classlist.toggle("show");
 }
 )
+
 
 const btn = document.getElementById('button');
 const cardWrapper = document.getElementById('card-wrapper');
@@ -30,15 +33,19 @@ const getTvShow = async (query) => {
     console.log(showSearch);
 };
 
-getTvShow("friends");
 
-btn.addEventListener("click", () => {
+
+function seriesSearch() {
+
     showSearch.forEach(x => {
+        cardWrapper.innerText = '';
         x.forEach(y => {
+            console.log('working');
+
             let image = document.createElement('img');
             image.classList.add('img-wrapper');
             cardWrapper.appendChild(image);
-            console.log(x[0].show.image.medium);
+            // console.log(x[0].show.image.medium);
 
             if (y.show.image != null) {
                 image.style.background = `url(${y.show.image.medium})`;
@@ -50,6 +57,19 @@ btn.addEventListener("click", () => {
         })
 
     })
+}
 
+seriesInput.addEventListener('keydown', (event) => {
+
+    if (event.which === 13) {
+
+        console.log(seriesInput.value);
+
+        getTvShow(seriesInput.value);
+
+        seriesInput.value = '';
+
+        setTimeout(seriesSearch, 1000);
+    }
 
 })
