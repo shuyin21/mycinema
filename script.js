@@ -33,8 +33,6 @@ const getTvShow = async (query) => {
     console.log(showSearch);
 };
 
-
-
 function seriesSearch() {
 
     showSearch.forEach(x => {
@@ -58,17 +56,12 @@ function seriesSearch() {
 
     })
 }
-
 seriesInput.addEventListener('keydown', (event) => {
 
     if (event.which === 13) {
-
         console.log(seriesInput.value);
-
         getTvShow(seriesInput.value);
-
         seriesInput.value = '';
-
         setTimeout(seriesSearch, 1000);
     }
 
